@@ -1,0 +1,35 @@
+form {
+  text-align: center;
+}
+.search {
+  border-radius: 20px;
+  border: none;
+  width: 10%;
+  height: 35px;
+  margin-left: 10px;
+  color: #5c6898;
+  background-color: white;
+  font-family: "Hind", sans-serif;
+  font-weight: 100;
+  transition: all 150ms ease-in-out;
+}
+.search:hover {
+  color: white;
+  background-color: #0f0326;
+}
+.current-location {
+  border-radius: 20px;
+  border: none;
+  width: 10%;
+  height: 35px;
+  margin-left: 10px;
+  color: white;
+  background-color: #0f0326;
+  font-family: "Hind", sans-serif;
+  font-weight: 100;
+  transition: all 150ms ease-in-out;
+}
+.current-location:hover {
+  color: #5c6898;
+  background-color: white;
+}

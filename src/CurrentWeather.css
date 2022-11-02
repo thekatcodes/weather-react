@@ -1,0 +1,43 @@
+.col-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.today-info {
+  display: flex;
+  flex-direction: column;
+  font-size: 15px;
+  font-weight: 100;
+  font-family: "Hind", sans-serif;
+}
+.separate {
+  font-size: 20px;
+  color: #0f0326;
+  font-family: "Montserrat", sans-serif;
+  opacity: 80%;
+  margin-bottom: 48px;
+}
+.link-c {
+  font-size: 20px;
+  color: #0f0326;
+  font-family: "Montserrat", sans-serif;
+  opacity: 80%;
+  margin-bottom: 45px;
+}
+
+.link-f {
+  font-size: 20px;
+  color: #0f0326;
+  font-family: "Montserrat", sans-serif;
+  opacity: 80%;
+  margin-bottom: 45px;
+}
+.disable-link {
+  pointer-events: none;
+}
+#display-temp {
+  font-size: 100px;
+  color: #0f0326;
+  font-family: "Montserrat", sans-serif;
+  opacity: 80%;
+}

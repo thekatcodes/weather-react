@@ -1,0 +1,25 @@
+.App {
+  display: block;
+  border-radius: 30px;
+  margin-top: 5%;
+  margin-right: 15%;
+  margin-left: 15%;
+  padding: 65px;
+  border: none;
+  background: #d1d5fa;
+  color: #5c6898;
+}
+.search-city {
+  border-radius: 20px;
+  border: none;
+  width: 50%;
+  height: 35px;
+  padding-left: 2%;
+  outline-color: #5c6898;
+  font-family: "Hind", sans-serif;
+}
+.weather-icon {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 22px;
+}
