@@ -1,4 +1,40 @@
-.code-source-link {
-  display: block;
-  margin-left: 15%;
+.card-deck {
+  display: flex;
+  justify-content: space-around;
+  margin: 50px;
+}
+.card.card-custom {
+  border-radius: 30px;
+  border: none;
+  transition: transform 0.25s;
+  width: 60x;
+  height: 170px;
+  align-items: center;
+}
+.card.card-custom:hover {
+  transform: scale(1.1);
+}
+.card-title {
+  text-align: center;
+  font-size: 18px;
+  font-family: "Hind", sans-serif;
+}
+
+#forecast-desc {
+  font-weight: bold;
+}
+#forecast-desc:first-letter {
+  text-transform: capitalize;
+}
+#forecast-body {
+  padding: 0%;
+}
+.temp.temp-high {
+  font-weight: bold;
+}
+.temp-wrapper {
+  text-align: center;
+  font-size: 17px;
+  font-family: "Hind", sans-serif;
+  margin-bottom: 20px;
 }
