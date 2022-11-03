@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div className="code-source-link">
       <a
-        href="https://github.com/thekatcodes/shecodes-projects/tree/main/weather-app"
+        href="https://github.com/thekatcodes/weather-react"
         target="_blank"
         rel="noreferrer"
       >
