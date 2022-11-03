@@ -7,6 +7,7 @@ export default function Footer() {
       <a
         href="https://github.com/thekatcodes/shecodes-projects/tree/main/weather-app"
         target="_blank"
+        rel="noreferrer"
       >
         Open-source code
       </a>
