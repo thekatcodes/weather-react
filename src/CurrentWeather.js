@@ -1,5 +1,7 @@
 import "./CurrentWeather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faDroplet, faWind, faSun } from "@fortawesome/free-solid-svg-icons";
 
 export default function CurrentWeather() {
   let temp = "20";
@@ -10,7 +12,8 @@ export default function CurrentWeather() {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-2" id="main-info">
-          <img src="" alt="cloudy" id="icon" className="weather-icon" />
+          <FontAwesomeIcon id="icon" className="weather-icon" icon={faSun} />
+          {/* <img src="" alt="cloudy" /> */}
         </div>
         <div className="col-2" id="main-info">
           <h3 className="temp" id="display-temp">
@@ -30,11 +33,12 @@ export default function CurrentWeather() {
               {desc}
             </span>
             <span className="today-forecast">
-              <i className="fa-solid fa-droplet"></i> Humidity:
+              <FontAwesomeIcon icon={faDroplet} />
+              Humidity:
               <span className="humidity">{humid}</span>%
             </span>
             <span className="today-forecast">
-              <i className="fa-solid fa-wind"></i> Wind:
+              <FontAwesomeIcon icon={faWind} /> Wind:
               <span className="wind">{wind}</span> km/h
             </span>
           </div>

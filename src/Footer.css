@@ -1,4 +1,6 @@
 .code-source-link {
   display: block;
   margin-left: 15%;
+  margin-inline-start: 15%;
+  margin-inline-end: 0px;
 }
