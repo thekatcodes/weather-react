@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
 import "./Search.css";
 import City from "./City";
+import CurrentWeather from "./CurrentWeather";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -15,7 +16,7 @@ export default function Search(props) {
       city: response.data.name,
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
-      humidity: response.data.main.humdity,
+      humidity: response.data.main.humidity,
       wind: response.data.wind.speed,
       icon: `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`,
     });
@@ -49,6 +50,7 @@ export default function Search(props) {
           <button className="current-location">My location</button>
         </form>
         <City data={weather} />;
+        <CurrentWeather data={weather} />
       </div>
     );
   } else {

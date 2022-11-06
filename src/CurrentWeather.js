@@ -1,23 +1,18 @@
 import "./CurrentWeather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faDroplet, faWind, faSun } from "@fortawesome/free-solid-svg-icons";
+import { faDroplet, faWind } from "@fortawesome/free-solid-svg-icons";
 
-export default function CurrentWeather() {
-  let temp = "20";
-  let humid = "40";
-  let wind = "15";
-  let desc = "cloudy";
+export default function CurrentWeather(props) {
   return (
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-2" id="main-info">
-          <FontAwesomeIcon id="icon" className="weather-icon" icon={faSun} />
-          {/* <img src="" alt="cloudy" /> */}
+          <img src="{props.data.icon}" alt="Weather icon" />
         </div>
         <div className="col-2" id="main-info">
           <h3 className="temp" id="display-temp">
-            {temp}
+            {Math.round(props.data.temperature)}
           </h3>
           <a href="/" className="link-c disable-link">
             °C
@@ -30,16 +25,16 @@ export default function CurrentWeather() {
         <div className="col-2" id="main-info">
           <div className="today-info">
             <span className="today-forecast" id="forecast-desc">
-              {desc}
+              {props.data.description}
             </span>
             <span className="today-forecast">
               <FontAwesomeIcon icon={faDroplet} />
               Humidity:
-              <span className="humidity">{humid}</span>%
+              <span className="humidity">{props.data.humidity}</span>%
             </span>
             <span className="today-forecast">
               <FontAwesomeIcon icon={faWind} /> Wind:
-              <span className="wind">{wind}</span> km/h
+              <span className="wind">{Math.round(props.data.wind)}</span> km/h
             </span>
           </div>
         </div>
