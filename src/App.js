@@ -11,7 +11,7 @@ import Forecast from "./Forecast";
 export default function App() {
   return (
     <div className="App">
-      <Search />
+      <Search defaultCity="Vancouver" />
       <City />
       <Date />
       <CurrentWeather />
