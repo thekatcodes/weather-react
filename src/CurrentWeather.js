@@ -2,6 +2,7 @@ import "./CurrentWeather.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faDroplet, faWind } from "@fortawesome/free-solid-svg-icons";
+import WeatherConvert from "./WeatherConvert";
 
 export default function CurrentWeather(props) {
   return (
@@ -10,18 +11,7 @@ export default function CurrentWeather(props) {
         <div className="col-2" id="main-info">
           <img src={props.data.icon} alt="Weather icon" />
         </div>
-        <div className="col-2" id="main-info">
-          <h3 className="temp" id="display-temp">
-            {Math.round(props.data.temperature)}
-          </h3>
-          <a href="/" className="link-c disable-link">
-            °C
-          </a>
-          <span className="separate"> |</span>
-          <a href="/" className="link-f">
-            °F
-          </a>
-        </div>
+        <WeatherConvert celsius={props.data.temperature} />
         <div className="col-2" id="main-info">
           <div className="today-info">
             <span className="today-forecast" id="forecast-desc">
