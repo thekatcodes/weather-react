@@ -4,6 +4,7 @@ import axios from "axios";
 import "./Search.css";
 import City from "./City";
 import CurrentWeather from "./CurrentWeather";
+import FormatDate from "./FormatDate";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -14,6 +15,7 @@ export default function Search(props) {
     setWeather({
       ready: true,
       city: response.data.name,
+      date: new Date(response.data.dt * 1000),
       temperature: response.data.main.temp,
       description: response.data.weather[0].description,
       humidity: response.data.main.humidity,
@@ -49,7 +51,8 @@ export default function Search(props) {
           </button>
           <button className="current-location">My location</button>
         </form>
-        <City data={weather} />;
+        <City data={weather} />
+        <FormatDate date={weather.date} />
         <CurrentWeather data={weather} />
       </div>
     );

@@ -8,7 +8,7 @@ export default function CurrentWeather(props) {
     <div className="container">
       <div className="row justify-content-center">
         <div className="col-2" id="main-info">
-          <img src="{props.data.icon}" alt="Weather icon" />
+          <img src={props.data.icon} alt="Weather icon" />
         </div>
         <div className="col-2" id="main-info">
           <h3 className="temp" id="display-temp">
