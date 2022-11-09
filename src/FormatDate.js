@@ -1,4 +1,4 @@
-import "./Date.css";
+import "./FormatDate.css";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function FormatDate(props) {
