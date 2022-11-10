@@ -1,15 +1,15 @@
 .card-deck {
   display: flex;
-  justify-content: space-around;
-  margin: 50px;
+  justify-content: space-between;
+  margin-top: 25px;
 }
 .card.card-custom {
   border-radius: 30px;
   border: none;
   transition: transform 0.25s;
-  width: 60x;
   height: 170px;
-  align-items: center;
+  justify-content: center;
+  padding: 60px;
 }
 .card.card-custom:hover {
   transform: scale(1.1);
