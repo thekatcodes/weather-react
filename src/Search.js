@@ -12,7 +12,7 @@ export default function Search(props) {
   const [city, setCity] = useState(props.defaultCity);
 
   function searchResponse(response) {
-    console.log(response);
+    // console.log(response);
     setWeather({
       ready: true,
       coordinates: response.data.coord,
@@ -33,9 +33,21 @@ export default function Search(props) {
     setCity(event.target.value);
   }
   function search() {
-    const apiKey = "be60748992fab0f5da8162563fb21245";
+    const apiKey = "fe1483f743b581b5520a1b725af03a49";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(searchResponse);
+  }
+  function searchLocation(response) {
+    console.log(response);
+    const apiKey = "fe1483f743b581b5520a1b725af03a49";
+    let lat = response.coords.latitude;
+    let lon = response.coords.longitude;
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(searchResponse);
+  }
+  function getCurrentPosition(event) {
+    event.preventDefault();
+    navigator.geolocation.getCurrentPosition(searchLocation);
   }
   if (weather.ready) {
     return (
@@ -51,7 +63,9 @@ export default function Search(props) {
           <button className="search" type="submit">
             Search
           </button>
-          <button className="current-location">My location</button>
+          <button className="current-location" onClick={getCurrentPosition}>
+            My location
+          </button>
         </form>
         <City data={weather} />
         <FormatDate date={weather.date} />
