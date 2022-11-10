@@ -1,7 +1,7 @@
 import "./Forecast.css";
 
 export default function ForecastDay(props) {
-  let iconImage = `http://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
+  let iconImage = `https://openweathermap.org/img/wn/${props.data.weather[0].icon}@2x.png`;
   function maxTemp() {
     let temperature = Math.round(props.data.temp.max);
     return `${temperature}`;

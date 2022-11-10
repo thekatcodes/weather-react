@@ -6,6 +6,7 @@ import City from "./City";
 import CurrentWeather from "./CurrentWeather";
 import FormatDate from "./FormatDate";
 import Forecast from "./Forecast";
+import Loader from "./Loader";
 
 export default function Search(props) {
   const [weather, setWeather] = useState({ ready: false });
@@ -33,13 +34,13 @@ export default function Search(props) {
     setCity(event.target.value);
   }
   function search() {
-    const apiKey = "fe1483f743b581b5520a1b725af03a49";
+    const apiKey = "c6f8ef4575250284954db9f4dfa7a996";
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(searchResponse);
   }
   function searchLocation(response) {
     console.log(response);
-    const apiKey = "fe1483f743b581b5520a1b725af03a49";
+    const apiKey = "c6f8ef4575250284954db9f4dfa7a996";
     let lat = response.coords.latitude;
     let lon = response.coords.longitude;
     let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
@@ -75,6 +76,6 @@ export default function Search(props) {
     );
   } else {
     search();
-    return "Loading";
+    return <Loader />;
   }
 }

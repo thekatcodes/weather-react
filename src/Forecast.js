@@ -3,6 +3,7 @@ import "./Forecast.css";
 import ForecastDay from "./ForecastDay";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from "axios";
+import Loader from "./Loader";
 
 export default function Forecast(props) {
   let [loaded, setLoaded] = useState(false);
@@ -19,7 +20,7 @@ export default function Forecast(props) {
   function searchForecast() {
     let lon = props.coord.lon;
     let lat = props.coord.lat;
-    const apiKey = "be60748992fab0f5da8162563fb21245";
+    const apiKey = "c6f8ef4575250284954db9f4dfa7a996";
     let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
     axios.get(apiUrl).then(handleResponse);
   }
@@ -42,6 +43,6 @@ export default function Forecast(props) {
     );
   } else {
     searchForecast();
-    return "Loading";
+    return <Loader />;
   }
 }
