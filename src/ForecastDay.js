@@ -17,22 +17,22 @@ export default function ForecastDay(props) {
     return days[day];
   }
   return (
-    <div class="card card-custom">
+    <div className="card card-custom">
       <img
         src={iconImage}
         alt="Forecast icon"
         id="icon"
-        class="weather-icon"
+        className="weather-icon"
         width="60"
         height="60"
       />
-      <div class="card-body" id="forecast-body">
-        <div class="temp-wrapper">
-          <span class="temp temp-high">{maxTemp()}</span>
+      <div className="card-body" id="forecast-body">
+        <div className="temp-wrapper">
+          <span className="temp temp-high">{maxTemp()}</span>
           °/
-          <span class="temp temp-low">{minTemp()}</span>°
+          <span className="temp temp-low">{minTemp()}</span>°
         </div>
-        <h5 class="card-title">{day()}</h5>
+        <h5 className="card-title">{day()}</h5>
       </div>
     </div>
   );

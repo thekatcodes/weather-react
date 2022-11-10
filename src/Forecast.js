@@ -26,7 +26,7 @@ export default function Forecast(props) {
   if (loaded) {
     console.log(forecast);
     return (
-      <div className="card-deck" id="forecast">
+      <div class="card-deck" id="forecast">
         {forecast.map(function (dailyForecast, index) {
           if (index < 5) {
             return (

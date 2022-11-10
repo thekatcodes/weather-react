@@ -1,7 +1,12 @@
 .card-deck {
   display: flex;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 5px;
+  margin-left: 5px;
 }
 .card.card-custom {
   border-radius: 30px;
